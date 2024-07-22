@@ -272,20 +272,24 @@ input:focus {
     background-color: #f4f5f8;
     border-radius: 20px;
     display: flex;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    flex-direction: column;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 
 .image-container {
     flex: 0.3;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 
+/* 
 .login-text {
     font-size: 2vw;
     padding-bottom: 20px;
-}
+} */
 
 .login-box {
     flex: 0.7;
@@ -302,7 +306,7 @@ input:focus {
     gap: 20px;
 }
 
-.list-container {
+/* .list-container {
     flex: 0.7;
     display: flex;
     flex-direction: column;
@@ -393,4 +397,4 @@ input:focus {
         height: 100vh;
         width: 100vw;
     }
-}
+} */
