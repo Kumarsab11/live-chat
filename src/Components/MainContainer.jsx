@@ -3,7 +3,7 @@ import "./myStyle.css";
 import Sidebar from "./Sidebar";
 //import Welcome from "./Welcome";
 //import CreateGroups from "./CreateGroups";
-import Login from "./Login";
+//import Login from "./Login";
 //import ChatArea from "./ChatArea";
 
 const MainContainer = () => {
@@ -25,7 +25,7 @@ const MainContainer = () => {
       {/* <ChatArea props={conversations[0]} /> */}
       {/* <Welcome /> */}
       {/* <CreateGroups /> */}
-      <Login />
+      {/* <Login /> */}
     </div>
   );
 };
