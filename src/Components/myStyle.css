@@ -173,7 +173,7 @@ input:focus {
 
 .messages-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     flex: 1;
     background-color: white;
     padding: 10px 10px;
