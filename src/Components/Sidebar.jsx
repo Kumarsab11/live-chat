@@ -10,10 +10,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 import ConversationsItem from "./ConversationsItem";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../Features/themeSlice";
 
 const Sidebar = () => {
   const navigate = useNavigate();
-  const [lightTheme, setLightTheme] = useState(true);
+  const dispatch = useDispatch();
+  const lightTheme = useSelector((state) => state.themeKey);
+
   const [conversations, setConversations] = useState([
     {
       name: "Sample_User1",
@@ -61,9 +65,7 @@ const Sidebar = () => {
           </IconButton>
           <IconButton
             onClick={() => {
-              setLightTheme((prevValue) => {
-                return !prevValue;
-              });
+              dispatch(toggleTheme());
             }}
           >
             {lightTheme && (
