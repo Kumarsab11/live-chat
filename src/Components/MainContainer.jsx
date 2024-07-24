@@ -4,8 +4,8 @@ import Sidebar from "./Sidebar";
 //import Welcome from "./Welcome";
 //import CreateGroups from "./CreateGroups";
 //import Login from "./Login";
-import ChatArea from "./ChatArea";
-import Users from "./Users";
+//import ChatArea from "./ChatArea";
+//import Users from "./Users";
 import { Outlet } from "react-router-dom";
 
 const MainContainer = () => {
