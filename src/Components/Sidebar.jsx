@@ -5,12 +5,15 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NightlightIcon from "@mui/icons-material/Nightlight";
+import LightModeIcon from "@mui/icons-material/LightMode";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 import ConversationsItem from "./ConversationsItem";
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const [lightTheme, setLightTheme] = useState(true);
   const [conversations, setConversations] = useState([
     {
       name: "Sample_User1",
@@ -23,14 +26,15 @@ const Sidebar = () => {
       timeStamp: "today",
     },
   ]);
-  const navigate = useNavigate();
 
   return (
     <div className="sidebar-container">
-      <div className="sb-header">
+      <div className={"sb-header" + (lightTheme ? "" : " dark")}>
         <div>
           <IconButton>
-            <AccountCircleIcon />
+            <AccountCircleIcon
+              className={"icon" + (lightTheme ? "" : " dark")}
+            />
           </IconButton>
         </div>
         <div>
@@ -39,34 +43,50 @@ const Sidebar = () => {
               navigate("users");
             }}
           >
-            <PersonAddIcon />
+            <PersonAddIcon className={"icon" + (lightTheme ? "" : " dark")} />
           </IconButton>
           <IconButton
             onClick={() => {
               navigate("groups");
             }}
           >
-            <GroupAddIcon />
+            <GroupAddIcon className={"icon" + (lightTheme ? "" : " dark")} />
           </IconButton>
           <IconButton
             onClick={() => {
               navigate("create-group");
             }}
           >
-            <AddCircleIcon />
+            <AddCircleIcon className={"icon" + (lightTheme ? "" : " dark")} />
           </IconButton>
-          <IconButton>
-            <NightlightIcon />
+          <IconButton
+            onClick={() => {
+              setLightTheme((prevValue) => {
+                return !prevValue;
+              });
+            }}
+          >
+            {lightTheme && (
+              <NightlightIcon
+                className={"icon" + (lightTheme ? "" : " dark")}
+              />
+            )}
+            {!lightTheme && (
+              <LightModeIcon className={"icon" + (lightTheme ? "" : " dark")} />
+            )}
           </IconButton>
         </div>
       </div>
-      <div className="sb-search">
+      <div className={"sb-search" + (lightTheme ? "" : " dark")}>
         <IconButton>
-          <SearchIcon />
+          <SearchIcon className={"icon" + (lightTheme ? "" : " dark")} />
         </IconButton>
-        <input placeholder="Search" className="search-box" />
+        <input
+          placeholder="Search"
+          className={"search-box" + (lightTheme ? "" : " dark")}
+        />
       </div>
-      <div className="sb-conversations">
+      <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
         {conversations.map((conversation) => {
           return (
             <ConversationsItem props={conversation} key={conversation.name} />
