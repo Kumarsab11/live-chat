@@ -81,15 +81,10 @@ input:focus {
     margin: 5px;
     border-radius: 10px;
     box-sizing: border-box;
-    transition-duration: 0.5s;
 }
 
 .conversation-container:hover {
     background-color: #d9d9d9;
-}
-
-.conversation-container:active {
-    background-color: white;
 }
 
 
@@ -178,7 +173,7 @@ input:focus {
 
 .messages-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex: 1;
     background-color: white;
     padding: 10px 10px;
@@ -319,6 +314,7 @@ input:focus {
     padding: 12px 5px;
     margin: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
         rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -342,7 +338,7 @@ input:focus {
     display: none;
 }
 
-.list-item {
+.list-tem {
     display: flex;
     align-items: center;
     background-color: white;
@@ -352,15 +348,6 @@ input:focus {
     padding: 10px 5px;
     margin: 10px;
     user-select: none;
-    transition-duration: 0.5s;
-}
-
-.list-item:hover {
-    background-color: rgb(226, 226, 226);
-}
-
-.list-item:active {
-    background-color: white;
 }
 
 .hyper {
