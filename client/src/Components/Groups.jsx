@@ -41,6 +41,7 @@ function Groups() {
         console.log("Group Data from API ", response.data);
         SetGroups(response.data);
       });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   return (

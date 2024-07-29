@@ -46,6 +46,7 @@ function Sidebar() {
       setConversations(response.data);
       // setRefresh(!refresh);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   return (

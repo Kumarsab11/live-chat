@@ -39,6 +39,7 @@ function Users() {
       setUsers(data.data);
       // setRefresh(!refresh);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh]);
 
   return (
