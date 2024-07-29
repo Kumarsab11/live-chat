@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import axios from "axios";
 import { myContext } from "./MainContainer";
-import "./myStyles.css";
+import "./myStyle.css";
 
 function ChatArea() {
   const lightTheme = useSelector((state) => state.themeKey);

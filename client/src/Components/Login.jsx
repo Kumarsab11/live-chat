@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import logo from "../Images/live-chat_512px.png";
+import logo from "../Images/live-chat.png";
 import { Backdrop, Button, CircularProgress, TextField } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Toaster from "./Toaster";
-import "./myStyles.css";
+import "./myStyle.css";
 
 
 function Login() {

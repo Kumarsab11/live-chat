@@ -1,5 +1,5 @@
 import React from "react";
-import "./myStyles.css";
+import "./myStyle.css";
 
 
 function MessageSelf({ props }) {

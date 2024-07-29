@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Images/live-chat_512px.png";
+import logo from "../Images/live-chat.png";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
