@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import Toaster from "./Toaster";
 import "./myStyle.css";
 
-
 function Login() {
   const [showlogin, setShowLogin] = useState(false);
   const [data, setData] = useState({ name: "", email: "", password: "" });
@@ -14,7 +13,6 @@ function Login() {
 
   const [logInStatus, setLogInStatus] = React.useState("");
   const [signInStatus, setSignInStatus] = React.useState("");
-
   const navigate = useNavigate();
 
   const changeHandler = (e) => {
