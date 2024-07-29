@@ -34,7 +34,7 @@ function Users() {
         Authorization: `Bearer ${userData.data.token}`,
       },
     };
-    axios.get("http://localhost:8080/user/fetchUsers", config).then((data) => {
+    axios.get("http://localhost:8000/user/fetchUsers", config).then((data) => {
       console.log("UData refreshed in Users panel ");
       setUsers(data.data);
       // setRefresh(!refresh);
@@ -56,6 +56,7 @@ function Users() {
           <img
             src={logo}
             style={{ height: "2rem", width: "2rem", marginLeft: "10px" }}
+            alt="logo"
           />
           <p className={"ug-title" + (lightTheme ? "" : " dark")}>
             Available Users
@@ -94,7 +95,7 @@ function Users() {
                     },
                   };
                   axios.post(
-                    "http://localhost:8080/chat/",
+                    "http://localhost:8000/chat/",
                     {
                       userId: user._id,
                     },

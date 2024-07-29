@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../Features/themeSlice";
 import axios from "axios";
-import { refreshSidebarFun } from "../Features/refreshSidebar";
+//import { refreshSidebarFun } from "../Features/refreshSidebar";
 import { myContext } from "./MainContainer";
 
 function Sidebar() {
@@ -41,7 +41,7 @@ function Sidebar() {
       },
     };
 
-    axios.get("http://localhost:8080/chat/", config).then((response) => {
+    axios.get("http://localhost:8000/chat/", config).then((response) => {
       console.log("Data refresh in sidebar ", response.data);
       setConversations(response.data);
       // setRefresh(!refresh);
@@ -119,7 +119,7 @@ function Sidebar() {
       </div>
       <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
         {conversations.map((conversation, index) => {
-          // console.log("current convo : ", conversation);
+          // console.log("current conversation : ", conversation);
           if (conversation.users.length === 1) {
             return <div key={index}></div>;
           }

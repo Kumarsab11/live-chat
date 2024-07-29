@@ -36,7 +36,7 @@ function Groups() {
     };
 
     axios
-      .get("http://localhost:8080/chat/fetchGroups", config)
+      .get("http://localhost:8000/chat/fetchGroups", config)
       .then((response) => {
         console.log("Group Data from API ", response.data);
         SetGroups(response.data);
@@ -59,6 +59,7 @@ function Groups() {
           <img
             src={logo}
             style={{ height: "2rem", width: "2rem", marginLeft: "10px" }}
+            alt="logo"
           />
           <p className={"ug-title" + (lightTheme ? "" : " dark")}>
             Available Groups
@@ -97,7 +98,7 @@ function Groups() {
                   //   },
                   // };
                   // axios.post(
-                  //   "http://localhost:8080/chat/",
+                  //   "http://localhost:8000/chat/",
                   //   {
                   //     userId: user._id,
                   //   },
