@@ -46,8 +46,7 @@ function Sidebar() {
       setConversations(response.data);
       // setRefresh(!refresh);
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [refresh]);
+  }, [refresh, user.token]);
 
   return (
     <div className="sidebar-container">
