@@ -1,6 +1,4 @@
 import React from "react";
-import "./myStyle.css";
-
 
 function MessageSelf({ props }) {
   // console.log("Message self Prop : ", props);

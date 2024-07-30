@@ -13,8 +13,6 @@ import { useSelector } from "react-redux";
 //import { create } from "@mui/material/styles/createTransitions";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./myStyle.css";
-
 
 function CreateGroups() {
   const lightTheme = useSelector((state) => state.themeKey);

@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import axios from "axios";
 import { myContext } from "./MainContainer";
-import "./myStyle.css";
 
 function ChatArea() {
   const lightTheme = useSelector((state) => state.themeKey);
@@ -142,7 +141,7 @@ function ChatArea() {
               setMessageContent(e.target.value);
             }}
             onKeyDown={(event) => {
-              if (event.code === "Enter") {
+              if (event.code == "Enter") {
                 // console.log(event);
                 sendMessage();
                 setMessageContent("");

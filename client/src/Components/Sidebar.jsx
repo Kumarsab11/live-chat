@@ -46,7 +46,7 @@ function Sidebar() {
       setConversations(response.data);
       // setRefresh(!refresh);
     });
-  }, [refresh, user.token]);
+  }, [refresh]);
 
   return (
     <div className="sidebar-container">

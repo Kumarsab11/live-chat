@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import logo from "../Images/live-chat.png";
+import logo from "../Images/live-chat_512px.png";
 import { Backdrop, Button, CircularProgress, TextField } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Toaster from "./Toaster";
-import "./myStyle.css";
 
 function Login() {
   const [showlogin, setShowLogin] = useState(false);
@@ -13,6 +12,7 @@ function Login() {
 
   const [logInStatus, setLogInStatus] = React.useState("");
   const [signInStatus, setSignInStatus] = React.useState("");
+
   const navigate = useNavigate();
 
   const changeHandler = (e) => {
@@ -108,7 +108,7 @@ function Login() {
               color="secondary"
               name="name"
               onKeyDown={(event) => {
-                if (event.code === "Enter") {
+                if (event.code == "Enter") {
                   // console.log(event);
                   loginHandler();
                 }
@@ -123,7 +123,7 @@ function Login() {
               color="secondary"
               name="password"
               onKeyDown={(event) => {
-                if (event.code === "Enter") {
+                if (event.code == "Enter") {
                   // console.log(event);
                   loginHandler();
                 }
@@ -165,7 +165,7 @@ function Login() {
               name="name"
               helperText=""
               onKeyDown={(event) => {
-                if (event.code === "Enter") {
+                if (event.code == "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }
@@ -179,7 +179,7 @@ function Login() {
               color="secondary"
               name="email"
               onKeyDown={(event) => {
-                if (event.code === "Enter") {
+                if (event.code == "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }
@@ -194,7 +194,7 @@ function Login() {
               color="secondary"
               name="password"
               onKeyDown={(event) => {
-                if (event.code === "Enter") {
+                if (event.code == "Enter") {
                   // console.log(event);
                   signUpHandler();
                 }

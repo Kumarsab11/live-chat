@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import "./myStyle.css";
+import "./myStyles.css";
 import Sidebar from "./Sidebar";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";

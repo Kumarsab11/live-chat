@@ -1,5 +1,5 @@
 import React from "react";
-import "./myStyle.css";
+import "./myStyles.css";
 import { useSelector } from "react-redux";
 
 function MessageOthers({ props }) {
